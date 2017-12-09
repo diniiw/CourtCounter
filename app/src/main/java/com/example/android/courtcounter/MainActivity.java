@@ -1,10 +1,13 @@
 package com.example.android.courtcounter;
 
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,12 +15,59 @@ public class MainActivity extends AppCompatActivity {
     int scoreB = 0;
     private EditText editTeamA;
     private EditText editTeamB;
+    private TextView countdown_txt;
+    private CountDownTimer countDownTimer;
+    private Button round1, round2, round3, round4;
+    private long timeLeftToMilisecond = 6000; //720000
+    private boolean timerRunning;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initialize();
+
+        //Start round 1
+        round1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTimer();
+            }
+        });
+
+        //Start round 2
+        round2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTimer();
+            }
+        });
+
+        //Start round 3
+        round3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTimer();
+            }
+        });
+
+        //Start round 4
+        round4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTimer();
+            }
+        });
+    }
+
+    protected void initialize(){
+        countdown_txt = (TextView) findViewById(R.id.countdown_txt);
+        round1 = (Button) findViewById(R.id.b_round1);
+        round2 = (Button) findViewById(R.id.b_round2);
+        round3 = (Button) findViewById(R.id.b_round3);
+        round4 = (Button) findViewById(R.id.b_round4);
     }
 
     /**
@@ -73,6 +123,41 @@ public class MainActivity extends AppCompatActivity {
         //To set score text
         score_bTV.setText(""+b);
     }
+
+    /**
+     * This method used to timer round 1 - round 4
+     */
+
+    public void startTimer(){
+        countDownTimer = new CountDownTimer(timeLeftToMilisecond, 1000) {
+            @Override
+            public void onTick(long l) {
+                timeLeftToMilisecond = l;
+                updateTimer();
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
+        timerRunning = true;
+    }
+
+    public void updateTimer(){
+        int minutes = (int) timeLeftToMilisecond / 60000;
+        int seconds = (int) timeLeftToMilisecond % 60000 / 1000;
+
+        String timeLeftText;
+
+        timeLeftText = "" + minutes;
+        timeLeftText += ":";
+        if (seconds < 10) timeLeftText += "0";
+        timeLeftText += seconds;
+        countdown_txt.setText(timeLeftText);
+    }
+
+
 
 
 }
