@@ -22,12 +22,16 @@
             android:orientation="vertical"
             android:paddingTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/edit_team_a"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:text="Team A"
+                android:ems="10"
+                android:hint="Team A"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColorLink="@color/colorPrimaryDark"
                 android:textSize="24sp" />
 
             <TextView
@@ -80,12 +84,14 @@
             android:orientation="vertical"
             android:paddingTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="16dp"
-                android:text="Team B"
+                android:ems="10"
+                android:hint="Team B"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
                 android:textSize="24sp" />
 
             <TextView
