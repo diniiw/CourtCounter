@@ -1,5 +1,5 @@
 # Court Counter
-![Image of Court Count](https://mir-s3-cdn-cf.behance.net/project_modules/disp/35ac0659690419.5a2b6cfa2fde5.png)
+![Image of Court Count](https://mir-s3-cdn-cf.behance.net/project_modules/disp/c12e9459690419.5a2bcab798b46.png)
 
 Court Counter is an application to count scores in basketball game.
 
@@ -11,4 +11,4 @@ Baseline 1 :
 - [x] Show Scores
 
 Baseline 2:
-- [ ] Timer
+- [x] Timer
