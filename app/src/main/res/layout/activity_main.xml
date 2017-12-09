@@ -1,150 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8C9EFF"
-    android:orientation="vertical">
+    android:background="#f1f1f1">
 
     <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
-
-        //This is linearLayout for team A
-
+        android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="center"
             android:orientation="vertical"
-            android:paddingTop="8dp">
-
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/edit_team_a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="58dp"
+                android:background="@drawable/circle_name"
                 android:ems="10"
                 android:hint="Team A"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
                 android:textColorLink="@color/colorPrimaryDark"
-                android:textSize="24sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/score_a_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="@android:color/black"
+                android:textColor="#3469ff"
                 android:textSize="50sp" />
 
             <Button
                 android:id="@+id/a_plus_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="140px"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/border_btn"
                 android:onClick="addScore"
                 android:text="+3 points"
                 android:textAlignment="center" />
 
             <Button
                 android:id="@+id/a_plus_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="140px"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/border_btn"
                 android:onClick="addScore"
                 android:text="+2 points"
                 android:textAlignment="center" />
 
             <Button
                 android:id="@+id/a_free"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="140px"
                 android:layout_gravity="center"
+                android:background="@drawable/border_btn"
                 android:onClick="addScore"
                 android:text="free throw"
                 android:textAlignment="center" />
 
         </LinearLayout>
 
-        //This is linearLayout for team B
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_gravity="center"
             android:orientation="vertical"
-            android:paddingTop="8dp">
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/edit_team_b"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/circle_name"
                 android:ems="10"
                 android:hint="Team B"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/score_b_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="0"
-                android:textColor="@android:color/black"
+                android:textColor="#3469ff"
                 android:textSize="50sp" />
 
             <Button
                 android:id="@+id/b_plus_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="140px"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/border_btn"
                 android:onClick="addScore"
                 android:text="+3 points"
                 android:textAlignment="center" />
 
             <Button
                 android:id="@+id/b_plus_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="140px"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/border_btn"
                 android:onClick="addScore"
                 android:text="+2 points"
                 android:textAlignment="center" />
 
             <Button
                 android:id="@+id/b_free"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300px"
+                android:layout_height="140px"
                 android:layout_gravity="center"
+                android:background="@drawable/border_btn"
                 android:onClick="addScore"
                 android:text="free throw"
                 android:textAlignment="center" />
 
         </LinearLayout>
 
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/layout_reset"
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="36dp"
-        android:text="Reset"
-        android:onClick="addScore"
-        android:textAlignment="center" />
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/main_layout"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-</LinearLayout>
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="830px"
+            android:layout_height="130px"
+            android:layout_gravity="center"
+            android:background="@drawable/border_btn"
+            android:onClick="addScore"
+            android:text="RESET SCORES"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/countdown_txt"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:text="12:00"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="38sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.40"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/b_round1"
+                android:layout_width="219px"
+                android:layout_height="90px"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                android:background="@drawable/border_btn"
+                android:text="Round 1" />
+
+            <Button
+                android:id="@+id/b_round2"
+                android:layout_width="219px"
+                android:layout_height="91px"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                android:background="@drawable/border_btn"
+                android:text="Round 2" />
+
+            <Button
+                android:id="@+id/b_round3"
+                android:layout_width="219px"
+                android:layout_height="91px"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                android:background="@drawable/border_btn"
+                android:text="ROUND 3" />
+
+            <Button
+                android:id="@+id/b_round4"
+                android:layout_width="219px"
+                android:layout_height="91px"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_margin="6dp"
+                android:background="@drawable/border_btn"
+                android:text="ROUND 4" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
