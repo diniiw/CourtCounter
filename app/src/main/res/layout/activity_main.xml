@@ -5,18 +5,21 @@
     android:layout_height="match_parent"
     android:background="#f1f1f1">
 
+    //viewGroup for scoring
     <LinearLayout
         android:id="@+id/main_layout"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        //viewGroup for Team A
         <LinearLayout
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_team_a"
@@ -35,8 +38,8 @@
                 android:id="@+id/score_a_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="6dp"
                 android:gravity="center"
                 android:text="0"
                 android:textColor="#3469ff"
@@ -76,12 +79,13 @@
 
         </LinearLayout>
 
+        //viewGroup for Team B
         <LinearLayout
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/edit_team_b"
@@ -100,8 +104,8 @@
                 android:id="@+id/score_b_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="6dp"
                 android:gravity="center"
                 android:text="0"
                 android:textColor="#3469ff"
@@ -144,16 +148,17 @@
 
     </LinearLayout>
 
+    //View Group for reset score and countdown
     <LinearLayout
         android:id="@+id/layout_reset"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:orientation="vertical"
-        android:weightSum="1"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/main_layout"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <Button
             android:id="@+id/reset"
@@ -169,11 +174,12 @@
             android:id="@+id/countdown_txt"
             android:layout_width="match_parent"
             android:layout_height="130px"
-            android:text="12:00"
             android:layout_marginTop="5dp"
+            android:text="12:00"
             android:textAlignment="center"
             android:textSize="38sp" />
 
+        /viewGroup for rounds button
         <LinearLayout
             android:id="@+id/layout_round"
             android:layout_width="match_parent"
@@ -186,47 +192,48 @@
                 android:id="@+id/b_round1"
                 android:layout_width="219px"
                 android:layout_height="90px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
                 android:background="@drawable/border_btn"
-                android:text="Round 1" />
+                android:gravity="center"
+                android:text="Round 1"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/b_round2"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
                 android:background="@drawable/border_btn"
-                android:text="Round 2" />
+                android:gravity="center"
+                android:text="Round 2"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/b_round3"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
                 android:background="@drawable/border_btn"
-                android:text="ROUND 3" />
+                android:gravity="center"
+                android:text="ROUND 3"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/b_round4"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
                 android:background="@drawable/border_btn"
-                android:text="ROUND 4" />
+                android:gravity="center"
+                android:text="ROUND 4"
+                android:textAlignment="center" />
         </LinearLayout>
 
+        //viewGroup for scores of each round
         <LinearLayout
             android:id="@+id/layout_result"
             android:layout_width="match_parent"
@@ -239,41 +246,41 @@
                 android:id="@+id/txt_results1"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
-                android:text=""/>
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txt_results2"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
-                android:text=""/>
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txt_results3"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
-                android:text=""/>
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/txt_results4"
                 android:layout_width="219px"
                 android:layout_height="91px"
-                android:gravity="center"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_margin="6dp"
-                android:text=""/>
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center" />
 
         </LinearLayout>
     </LinearLayout>
