@@ -15,11 +15,13 @@ public class MainActivity extends AppCompatActivity {
     int scoreB = 0;
     private EditText editTeamA;
     private EditText editTeamB;
+    private TextView results1,results2,results3,results4;
     private TextView countdown_txt;
     private CountDownTimer countDownTimer;
     private Button round1, round2, round3, round4;
-    private long timeLeftToMilisecond = 6000; //720000
+    private long timeLeftToMilisecond = 720000;
     private boolean timerRunning;
+    private String result_type;
 
 
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startTimer();
+                result_type = "round1";
             }
         });
 
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startTimer();
+                result_type = "round2";
             }
         });
 
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startTimer();
+                result_type = "round3";
             }
         });
 
@@ -58,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startTimer();
+                result_type = "round4";
             }
         });
     }
@@ -68,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
         round2 = (Button) findViewById(R.id.b_round2);
         round3 = (Button) findViewById(R.id.b_round3);
         round4 = (Button) findViewById(R.id.b_round4);
+        results1 = (TextView) findViewById(R.id.txt_results1);
+        results2 = (TextView) findViewById(R.id.txt_results2);
+        results3 = (TextView) findViewById(R.id.txt_results3);
+        results4 = (TextView) findViewById(R.id.txt_results4);
     }
 
     /**
@@ -138,6 +148,17 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                countdown_txt.setText("FINISH");
+
+                if(result_type.equalsIgnoreCase("round1")){
+                    results1.setText(scoreA + " : " + scoreB);
+                }else if (result_type.equalsIgnoreCase("round2")){
+                    results2.setText(scoreA + " : " + scoreB);
+                } else if(result_type.equalsIgnoreCase("round3")){
+                    results3.setText(scoreA + " : " + scoreB);
+                }else{
+                    results4.setText(scoreA + " : " + scoreB);
+                }
 
             }
         }.start();
